@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FP Calculator</title>
+    <style>
+        /*Hide arrows from input type = number */
+        /* Chrome, Safari, Edge, Opera */
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+        </style>
+</head>
+<body>
+    <h1>Function Point calculator</h1>
+    
+    <form>
+    <div id="container">
+    <div id="FU">
+        <h3>Enter Functional Units</h3>
+        
+        <label for="External Inputs">External Inputs</label>
+        <input type="number" onfocus="this.value=''" class="FnU">
+        <label for="External Outputs">External Outputs</label>
+        <input type="number" onfocus="this.value=''" class="FnU">
+        <label for="Internal Logical Files">Internal Logical Files</label>
+        <input type="number" onfocus="this.value=''" class="FnU">
+        <label for="External Interface Files">External Interface Files</label>
+        <input type="number" onfocus="this.value=''" class="FnU">
+        <label for="External Inquiries">External Inquiries</label>
+        <input type="number" onfocus="this.value=''" class="FnU">
+    </div>
+
+    <div id="GSC">
+        <h3>Enter GSC factors</h3>
+
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+        <input type="number" class="gsc" onfocus="this.value=''">
+    </div>
+
+    <div id="WF">
+        <h3>Weight Factors</h3>
+
+        <input type="radio" name="WF" value="Low" id="low">
+        <label for="low">Low</label><br>
+        <input type="radio" name="WF" value="Average" id="average">
+        <label for="average">Average</label><br>
+        <input type="radio" name="WF" value="High" id="high">
+        <label for="high">High</label><br>
+
+        <div id="btn">
+            <input type="button" id="x" value="Calculate FP"><br>
+            <input type="reset" value="Reset Inputs">
+        </div>
+    </div>
+
+    <div id="result">
+        <label for="ufp">UFP</label>
+        <input type="number" id="ufp" onfocus="this.value=''">
+        <label for="sumGsc">Sum of GSC</label>
+        <input type="number" id="sumGsc" onfocus="this.value=''">
+        <label for="TCF">TCP</label>
+        <input type="number" id="TCF" onfocus="this.value=''">
+        <label for="FP">Function Point</label>
+        <input type="number" id="FP" onfocus="this.value=''"> 
+    </div>
+    </div>
+    </form>
+    <div><p id="tip"><b>Shortcut tip</b>: Use Tab key to go to next input field</p></div> 
+<script src="app.js"></script>
+</body>
+</html>
